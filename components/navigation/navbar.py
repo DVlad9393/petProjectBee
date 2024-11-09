@@ -11,17 +11,17 @@ class Navbar:
 
         self.search_modal = SearchModal(page)
 
-        self.api_link = Link(page, locator="//a[text()='API']", name='API')
-        self.docs_link = Link(page, locator="//a[text()='Docs']", name='Docs')
+        # self.api_link = Link(page, locator="//a[text()='API']", name='API')
+        # self.docs_link = Link(page, locator="//a[text()='Docs']", name='Docs')
         self.search_button = Button(
-            page, locator="button.DocSearch-Button", name='Search'
+            page, locator='//*[@aria-label="Открыть поиск"]', name='Search'
         )
 
-    def visit_docs(self):
-        self.docs_link.click()
-
-    def visit_api(self):
-        self.api_link.click()
+    # def visit_docs(self):
+    #     self.docs_link.click()
+    #
+    # def visit_api(self):
+    #     self.api_link.click()
 
     def open_search(self):
         self.search_button.should_be_visible()

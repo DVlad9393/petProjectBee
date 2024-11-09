@@ -9,20 +9,20 @@ class SearchModal:
     def __init__(self, page: Page) -> None:
         self.page = page
 
-        self.empty_results_title = Title(
-            page, locator='p.DocSearch-Help', name='Empty results'
+        self.search_modal_title = Title(
+            page, locator='//p[@class="n3jKk" and text()="поиск"]', name='Search modal title'
         )
         self.search_input = Input(
-            page, locator='#docsearch-input', name='Search docs'
+            page, locator='//*[@aria-label="найти в билайне"]', name='Search products'
         )
-        self.search_result = ListItem(
-            page, locator='#docsearch-item-{result_number}', name='Result item'
+        self.search_all_results = ListItem(
+            page, locator='//span[@class="n3jKk c9sHF duPxy" and text()="все результаты"]', name='All Results item'
         )
 
     def modal_is_opened(self):
         self.search_input.should_be_visible()
-        self.empty_results_title.should_be_visible()
+        self.search_modal_title.should_be_visible()
 
     def find_result(self, keyword: str, result_number: int) -> None:
         self.search_input.fill(keyword, validate_value=True)
-        self.search_result.click(result_number=result_number)
+        self.search_all_results.click(result_number=result_number)
