@@ -23,6 +23,6 @@ class SearchModal:
         self.search_input.should_be_visible()
         self.search_modal_title.should_be_visible()
 
-    def find_result(self, keyword: str, result_number: int) -> None:
+    def find_result(self, keyword: str) -> None:
         self.search_input.fill(keyword, validate_value=True)
-        self.search_all_results.click(result_number=result_number)
+        self.search_all_results.click()
