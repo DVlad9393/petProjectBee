@@ -9,10 +9,10 @@ class BeeSearchPage(BasePage):
         super().__init__(page)
 
         self.product_title = Title(
-            page, locator="//span[@class='AIVQ3 sTx01 ylczO' and contains(text(), {product})]", name='Language title'
+            page, locator="//span[@class='AIVQ3 sTx01 ylczO' and contains(text(), 'Смартфоны')]", name='Language title'
         )
 
-    def product_present(self, product: str):
+    def product_category_smartphone_present(self, product: str):
         self.product_title.should_be_visible(product=product)
         self.product_title.should_have_text(
             product.capitalize(), product=product
