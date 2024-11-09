@@ -4,8 +4,8 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from playwright.sync_api import Page, sync_playwright
 
-from pages.playwright_home_page import PlaywrightHomePage
-from pages.playwright_languages_page import PlaywrightLanguagesPage
+from pages.playwright_home_page import BeeHomePage
+from pages.playwright_languages_page import BeeSearchPage
 
 
 @pytest.fixture(scope='function')
@@ -16,10 +16,10 @@ def chromium_page() -> Page:
 
 
 @pytest.fixture(scope='function')
-def playwright_home_page(chromium_page: Page) -> PlaywrightHomePage:
-    return PlaywrightHomePage(chromium_page)
+def bee_home_page(chromium_page: Page) -> BeeHomePage:
+    return BeeHomePage(chromium_page)
 
 
 @pytest.fixture(scope='function')
-def playwright_languages_page(chromium_page: Page) -> PlaywrightLanguagesPage:
-    return PlaywrightLanguagesPage(chromium_page)
+def bee_search_page(chromium_page: Page) -> BeeSearchPage:
+    return BeeSearchPage(chromium_page)

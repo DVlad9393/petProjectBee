@@ -11,7 +11,7 @@ class BasePage:
 
     def visit(self, url: str) -> Response | None:
         with allure.step(f'Opening the url "{url}"'):
-            return self.page.goto(url, wait_until='networkidle')
+            return self.page.goto(url, wait_until='load')
 
     def reload(self) -> Response | None:
         with allure.step(f'Reloading page with url "{self.page.url}"'):
