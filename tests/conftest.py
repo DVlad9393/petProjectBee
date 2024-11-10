@@ -11,8 +11,13 @@ from pages.bee_search_page import BeeSearchPage
 @pytest.fixture(scope='function')
 def chromium_page() -> Page:
     with sync_playwright() as playwright:
-        chromium = playwright.chromium.launch(headless=False)
-        yield chromium.new_page()
+        chromium = playwright.chromium.launch(headless=False,args=["--start-maximized", "--window-position=0,0"])
+        context = chromium.new_context(viewport={"width": 1600, "height": 900})
+        page = context.new_page()
+
+        yield page
+        page.close()
+        context.close()
 
 
 @pytest.fixture(scope='function')
