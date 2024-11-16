@@ -1,6 +1,10 @@
 import pytest
 import sys
 import os
+
+from pages.bee_basket_page import BeeBasketPage
+from pages.bee_planb_page import BeePlanBPage
+
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from playwright.sync_api import Page, sync_playwright
 
@@ -28,3 +32,11 @@ def bee_home_page(chromium_page: Page) -> BeeHomePage:
 @pytest.fixture(scope='function')
 def bee_search_page(chromium_page: Page) -> BeeSearchPage:
     return BeeSearchPage(chromium_page)
+
+@pytest.fixture(scope='function')
+def bee_planb_page(chromium_page: Page) -> BeePlanBPage:
+    return BeePlanBPage(chromium_page)
+
+@pytest.fixture(scope='function')
+def bee_basket_page(chromium_page: Page) -> BeeBasketPage:
+    return BeeBasketPage(chromium_page)
