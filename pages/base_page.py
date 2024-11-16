@@ -15,4 +15,4 @@ class BasePage:
 
     def reload(self) -> Response | None:
         with allure.step(f'Reloading page with url "{self.page.url}"'):
-            return self.page.reload(wait_until='domcontentloaded')
+            return self.page.reload(wait_until='load')

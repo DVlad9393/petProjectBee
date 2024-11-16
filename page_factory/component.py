@@ -22,7 +22,7 @@ class Component(ABC):
     def click(self, **kwargs) -> None:
         with allure.step(f'Clicking {self.type_of} with name "{self.name}"'):
             locator = self.get_locator(**kwargs)
-            locator.click()
+            locator.click(timeout=5000)
 
     def should_be_visible(self, **kwargs) -> None:
         with allure.step(f'Checking that {self.type_of} "{self.name}" is visible'):
@@ -32,4 +32,4 @@ class Component(ABC):
     def should_have_text(self, text: str, **kwargs) -> None:
         with allure.step(f'Checking that {self.type_of} "{self.name}" has text "{text}"'):
             locator = self.get_locator(**kwargs)
-            expect(locator).to_have_text(text)
+            expect(locator).to_have_text(text, timeout=5000)

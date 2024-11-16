@@ -8,7 +8,6 @@ from page_factory.link import Link
 class Navbar:
     def __init__(self, page: Page) -> None:
         self.page = page
-
         self.search_modal = SearchModal(page)
 
         # self.api_link = Link(page, locator="//a[text()='API']", name='API')
