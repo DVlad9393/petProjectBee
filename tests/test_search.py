@@ -1,3 +1,4 @@
+import allure
 import pytest
 
 from pages.bee_basket_page import BeeBasketPage
@@ -8,7 +9,7 @@ from settings import BASE_URL
 
 
 class TestSearch:
-    @pytest.mark.parametrize('keyword', ['Смартфоны'])
+    @pytest.mark.parametrize('keyword', ['смартфоны'])
     def test_search_smartphone_page(
         self,
         keyword: str,
@@ -24,7 +25,6 @@ class TestSearch:
 
         bee_search_page.product_category_smartphone_present(product=keyword)
 
-
     @pytest.mark.smoke
     def test_search_and_buy_tariff(
         self,
@@ -39,4 +39,5 @@ class TestSearch:
 
         bee_planb_page.product_planb_present("настрой план б. под себя")
         bee_planb_page.find_and_click_buy_tariff_button()
+
         bee_basket_page.product_basket_present("план б.")

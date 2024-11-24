@@ -10,7 +10,7 @@ class BeePlanBPage(BasePage):
         super().__init__(page)
 
         self.product_planb_title = Title(
-            page, locator="//span[@class='AIVQ3 o2F3Q bDcRi' and contains(text(), 'план б')]", name='Product Plan B title')
+            page, locator="//span[@class='AIVQ3 o2F3Q bDcRi' and contains(text(), 'план б')]", name='Product Plan B')
 
         self.product_planb_buy_button = Button(
             page, locator="//button[@class='AdThl bMhN6 t0t9G prz9u l8VYk']", name='Product Plan B title'
