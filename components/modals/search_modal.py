@@ -2,7 +2,6 @@ from playwright.sync_api import Page
 
 from page_factory.button import Button
 from page_factory.input import Input
-from page_factory.list_item import ListItem
 from page_factory.title import Title
 
 
@@ -16,15 +15,15 @@ class SearchModal:
         self.search_input = Input(
             page, locator='//*[@aria-label="найти в билайне"]', name='Search products'
         )
-        self.search_all_results = ListItem(
-            page, locator='//span[@class="n3jKk c9sHF duPxy" and text()="все результаты"]', name='All Results item'
+        self.search_all_results = Button(
+            page, locator='//span[contains(text(),"все результаты")]', name='All Results'
         )
         self.frequent_keyword_tariff = Button(
-            page, locator='//button[@data-metric-name ="headerMetric:handleClickSearchElementBlock"]/span[@class = "n3jKk ffb9F WfcVx" and text() = "тарифы"]'
-            , name='Frequent Keyword Tariff button'
+            page, locator='//button[@data-metric-name ="headerMetric:handleClickSearchElementBlock"]/p[@class = "n3jKk ffb9F WfcVx" and text() = "тарифы"]'
+            , name='Frequent Keyword Tariff'
         )
         self.result_tariff_plan_b_button = Button(
-            page, locator='//span[@class = "n3jKk ffb9F hCtRh" and text() = "план б."]', name='Plan B result button'
+            page, locator='//span[@class = "n3jKk ffb9F cell-text" and text() = "план б."]', name='Plan B result'
         )
 
     def modal_is_opened(self):

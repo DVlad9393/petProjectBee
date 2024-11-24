@@ -1,3 +1,4 @@
+import allure
 import pytest
 import sys
 import os
@@ -20,6 +21,11 @@ def chromium_page() -> Page:
         page = context.new_page()
 
         yield page
+        allure.attach(
+            page.screenshot(),
+            name='screenshot',
+            attachment_type=allure.attachment_type.PNG,
+        )
         page.close()
         context.close()
 

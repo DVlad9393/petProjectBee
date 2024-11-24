@@ -1,6 +1,5 @@
 from playwright.sync_api import Page
 
-from page_factory.button import Button
 from page_factory.title import Title
 from pages.base_page import BasePage
 
