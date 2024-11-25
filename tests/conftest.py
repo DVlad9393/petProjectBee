@@ -17,7 +17,7 @@ from pages.bee_search_page import BeeSearchPage
 def chromium_page() -> Page:
     with sync_playwright() as playwright:
         chromium = playwright.chromium.launch(headless=False,args=["--start-maximized", "--window-position=0,0"])
-        context = chromium.new_context(viewport={"width": 1600, "height": 900})
+        context = chromium.new_context(viewport={"width": 1600, "height": 900}, record_video_dir = "allure-results/")
         page = context.new_page()
 
         yield page
@@ -26,8 +26,17 @@ def chromium_page() -> Page:
             name='screenshot',
             attachment_type=allure.attachment_type.PNG,
         )
+
+        video = page.video.path()
+
         page.close()
         context.close()
+
+        allure.attach.file(
+            video,
+            name="video",
+            attachment_type=allure.attachment_type.WEBM,
+        )
 
 
 @pytest.fixture(scope='function')

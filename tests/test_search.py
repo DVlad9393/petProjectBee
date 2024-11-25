@@ -1,4 +1,3 @@
-import allure
 import pytest
 
 from pages.bee_basket_page import BeeBasketPage
