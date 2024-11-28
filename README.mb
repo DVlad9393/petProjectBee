@@ -1,5 +1,4 @@
 Project setup:
-
 pip install virtualenv
 virtualenv venv
 source venv/bin/activate
@@ -8,6 +7,9 @@ pip install -r requirements.txt
 
 Starting auto tests:
 python -m pytest
+
+Starting auto tests in parallel (-n count of tests):
+python -m pytest -n 2
 
 Starting allure-results:
 allure serve
