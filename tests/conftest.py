@@ -38,11 +38,9 @@ def chromium_page() -> Page:
             attachment_type=allure.attachment_type.WEBM,
         )
 
-
 @pytest.fixture(scope='function')
 def bee_home_page(chromium_page: Page) -> BeeHomePage:
     return BeeHomePage(chromium_page)
-
 
 @pytest.fixture(scope='function')
 def bee_search_page(chromium_page: Page) -> BeeSearchPage:
