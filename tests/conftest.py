@@ -13,43 +13,46 @@ from pages.bee_home_page import BeeHomePage
 from pages.bee_search_page import BeeSearchPage
 
 
-@pytest.fixture(scope='function')
-def chromium_page() -> Page:
+@pytest.fixture(scope='function', params=['chromium'])
+def browser_page(request) -> Page:
+    '''
+    :params browser_name: 'chromium', 'firefox', 'webkit'
+    '''
+    browser_name = request.param
     with sync_playwright() as playwright:
-        chromium = playwright.chromium.launch(headless=False,args=["--start-maximized", "--window-position=0,0"])
-        context = chromium.new_context(viewport={"width": 1600, "height": 900}, record_video_dir = "allure-results/")
-        page = context.new_page()
+       browser = getattr(playwright, browser_name).launch(headless=False, args=["--start-maximized", "--window-position=0,0"])
+       context = browser.new_context(viewport={"width": 1600, "height": 900}, record_video_dir="allure-results/")
+       page = context.new_page()
 
-        yield page
-        allure.attach(
-            page.screenshot(),
-            name='screenshot',
-            attachment_type=allure.attachment_type.PNG,
-        )
+       yield page
 
-        video = page.video.path()
+       allure.attach(
+           page.screenshot(),
+           name='screenshot',
+           attachment_type=allure.attachment_type.PNG,
+       )
 
-        page.close()
-        context.close()
-
-        allure.attach.file(
-            video,
-            name="video",
-            attachment_type=allure.attachment_type.WEBM,
-        )
-
-@pytest.fixture(scope='function')
-def bee_home_page(chromium_page: Page) -> BeeHomePage:
-    return BeeHomePage(chromium_page)
+       video = page.video.path()
+       page.close()
+       context.close()
+       allure.attach.file(
+           video,
+           name="video",
+           attachment_type=allure.attachment_type.WEBM,
+       )
 
 @pytest.fixture(scope='function')
-def bee_search_page(chromium_page: Page) -> BeeSearchPage:
-    return BeeSearchPage(chromium_page)
+def bee_home_page(browser_page: Page) -> BeeHomePage:
+    return BeeHomePage(browser_page)
 
 @pytest.fixture(scope='function')
-def bee_planb_page(chromium_page: Page) -> BeePlanBPage:
-    return BeePlanBPage(chromium_page)
+def bee_search_page(browser_page: Page) -> BeeSearchPage:
+    return BeeSearchPage(browser_page)
 
 @pytest.fixture(scope='function')
-def bee_basket_page(chromium_page: Page) -> BeeBasketPage:
-    return BeeBasketPage(chromium_page)
+def bee_planb_page(browser_page: Page) -> BeePlanBPage:
+    return BeePlanBPage(browser_page)
+
+@pytest.fixture(scope='function')
+def bee_basket_page(browser_page: Page) -> BeeBasketPage:
+    return BeeBasketPage(browser_page)

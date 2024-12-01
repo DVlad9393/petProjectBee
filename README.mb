@@ -8,7 +8,7 @@ pip install -r requirements.txt
 Starting auto tests:
 python -m pytest
 
-Starting auto tests in parallel (-n count of tests):
+Starting auto tests in parallel (-n count of parallel tests):
 python -m pytest -n 2
 
 Starting allure-results:
