@@ -19,11 +19,10 @@ jobs:
 
     - name: Install Playwright Browsers
       run: |
-        playwright install    
+        playwright install
 
-    - name: run tests
-      run: |
-        pytest
+    - name: Run tests with Xvfb
+      run: xvfb-run pytest
 
     - name: get allure history
       uses: actions/checkout@v4
