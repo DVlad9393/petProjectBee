@@ -1,0 +1,39 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "playwright._impl._errors.TimeoutError: Page.goto: Timeout 30000ms exceeded.\nCall log:\nnavigating to \"https://krasnodar.beeline.ru/customers/products/\", waiting until \"load\"",
+      "children" : [ {
+        "name" : "test_search_smartphone_page[chromium-\\u0441\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b]",
+        "uid" : "e5fef5cc9181465",
+        "parentUid" : "f169c71baa3bcfe15b84817a0a85fc8a",
+        "status" : "broken",
+        "time" : {
+          "start" : 1733070664604,
+          "stop" : 1733070694614,
+          "duration" : 30010
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'chromium'", "'смартфоны'" ]
+      }, {
+        "name" : "test_search_and_buy_tariff[chromium]",
+        "uid" : "fafe365a6036a13c",
+        "parentUid" : "f169c71baa3bcfe15b84817a0a85fc8a",
+        "status" : "broken",
+        "time" : {
+          "start" : 1733070725772,
+          "stop" : 1733070755778,
+          "duration" : 30006
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'chromium'" ]
+      } ],
+      "uid" : "f169c71baa3bcfe15b84817a0a85fc8a"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}
