@@ -1,14 +1,18 @@
 name: tests_with_allure
 
 on:
-  pull_request:
-    branches:
-      - main
+  on:
+    # Запуск вручную через интерфейс GitHub Actions
+    workflow_dispatch:
 
+    # Автоматический запуск при создании Pull Request
+    pull_request:
+      branches:
+        - main
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
     - uses: actions/checkout@v4
     - name: Set up Python 3.13
