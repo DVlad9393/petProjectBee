@@ -1,14 +1,11 @@
 name: tests_with_allure
 
 on:
-  on:
-    # Запуск вручную через интерфейс GitHub Actions
-    workflow_dispatch:
+  workflow_dispatch:
 
-    # Автоматический запуск при создании Pull Request
-    pull_request:
-      branches:
-        - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
