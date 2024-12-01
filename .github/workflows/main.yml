@@ -1,7 +1,10 @@
 name: tests_with_allure
 
 on:
-  workflow_dispatch
+  pull_request:
+    branches:
+      - main
+
 
 jobs:
   build:
