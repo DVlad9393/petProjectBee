@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "playwright._impl._errors.TimeoutError: Locator.click: Timeout 10000ms exceeded.\nCall log:\nwaiting for locator(\"//span[@class = \\\"n3jKk ffb9F cell-text\\\" and text() = \\\"план б.\\\"]\")\n  -   locator resolved to <span class=\"n3jKk ffb9F cell-text\">план б.</span>\n  - attempting click action\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   performing click action\n  -   click action done\n  -   waiting for scheduled navigations to finish",
+      "children" : [ {
+        "name" : "test_search_and_buy_tariff[chromium]",
+        "uid" : "26843f84994c6442",
+        "parentUid" : "f51c5408d508c94f7d16bc6ccf9d5955",
+        "status" : "broken",
+        "time" : {
+          "start" : 1733171116585,
+          "stop" : 1733171134979,
+          "duration" : 18394
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'chromium'" ]
+      } ],
+      "uid" : "f51c5408d508c94f7d16bc6ccf9d5955"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}

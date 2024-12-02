@@ -1,0 +1,354 @@
+{
+  "uid" : "26843f84994c6442",
+  "name" : "test_search_and_buy_tariff[chromium]",
+  "fullName" : "tests.test_search.TestSearch#test_search_and_buy_tariff",
+  "historyId" : "eab6a5d5fb15ee169fc8f0aa92401b98",
+  "time" : {
+    "start" : 1733171116585,
+    "stop" : 1733171134979,
+    "duration" : 18394
+  },
+  "status" : "broken",
+  "statusMessage" : "playwright._impl._errors.TimeoutError: Locator.click: Timeout 10000ms exceeded.\nCall log:\nwaiting for locator(\"//span[@class = \\\"n3jKk ffb9F cell-text\\\" and text() = \\\"план б.\\\"]\")\n  -   locator resolved to <span class=\"n3jKk ffb9F cell-text\">план б.</span>\n  - attempting click action\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   performing click action\n  -   click action done\n  -   waiting for scheduled navigations to finish",
+  "statusTrace" : "self = <tests.test_search.TestSearch object at 0x7f7db7df9310>\nbee_home_page = <pages.bee_home_page.BeeHomePage object at 0x7f7db79a2fd0>\nbee_planb_page = <pages.bee_planb_page.BeePlanBPage object at 0x7f7db7dd17f0>\nbee_basket_page = <pages.bee_basket_page.BeeBasketPage object at 0x7f7db7dd1e80>\n\n    @pytest.mark.smoke\n    def test_search_and_buy_tariff(\n        self,\n            bee_home_page: BeeHomePage,\n            bee_planb_page: BeePlanBPage,\n            bee_basket_page: BeeBasketPage\n    ):\n    \n        bee_home_page.visit(BASE_URL)\n        bee_home_page.navbar.open_search()\n>       bee_home_page.navbar.search_modal.find_result_by_clicking_frequent_keyword_tariff()\n\ntests/test_search.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ncomponents/modals/search_modal.py:42: in find_result_by_clicking_frequent_keyword_tariff\n    self.result_tariff_plan_b_button.click()\npage_factory/component.py:25: in click\n    locator.click(timeout=10000)\n/opt/hostedtoolcache/Python/3.13.0/x64/lib/python3.13/site-packages/playwright/sync_api/_generated.py:15398: in click\n    self._sync(\n/opt/hostedtoolcache/Python/3.13.0/x64/lib/python3.13/site-packages/playwright/_impl/_locator.py:156: in click\n    return await self._frame.click(self._selector, strict=True, **params)\n/opt/hostedtoolcache/Python/3.13.0/x64/lib/python3.13/site-packages/playwright/_impl/_frame.py:488: in click\n    await self._channel.send(\"click\", locals_to_params(locals()))\n/opt/hostedtoolcache/Python/3.13.0/x64/lib/python3.13/site-packages/playwright/_impl/_connection.py:59: in send\n    return await self._connection.wrap_api_call(\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <playwright._impl._connection.Connection object at 0x7f7db79a0910>\ncb = <function Channel.send.<locals>.<lambda> at 0x7f7db7806d40>\nis_internal = False\n\n    async def wrap_api_call(\n        self, cb: Callable[[], Any], is_internal: bool = False\n    ) -> Any:\n        if self._api_zone.get():\n            return await cb()\n        task = asyncio.current_task(self._loop)\n        st: List[inspect.FrameInfo] = getattr(task, \"__pw_stack__\", inspect.stack())\n        parsed_st = _extract_stack_trace_information_from_stack(st, is_internal)\n        self._api_zone.set(parsed_st)\n        try:\n            return await cb()\n        except Exception as error:\n>           raise rewrite_error(error, f\"{parsed_st['apiName']}: {error}\") from None\nE           playwright._impl._errors.TimeoutError: Locator.click: Timeout 10000ms exceeded.\nE           Call log:\nE           waiting for locator(\"//span[@class = \\\"n3jKk ffb9F cell-text\\\" and text() = \\\"план б.\\\"]\")\nE             -   locator resolved to <span class=\"n3jKk ffb9F cell-text\">план б.</span>\nE             - attempting click action\nE             -   waiting for element to be visible, enabled and stable\nE             -   element is visible, enabled and stable\nE             -   scrolling into view if needed\nE             -   done scrolling\nE             -   performing click action\nE             -   click action done\nE             -   waiting for scheduled navigations to finish\n\n/opt/hostedtoolcache/Python/3.13.0/x64/lib/python3.13/site-packages/playwright/_impl/_connection.py:520: TimeoutError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "bee_planb_page",
+    "time" : {
+      "start" : 1733171116584,
+      "stop" : 1733171116584,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "bee_home_page",
+    "time" : {
+      "start" : 1733171116584,
+      "stop" : 1733171116584,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "browser_page",
+    "time" : {
+      "start" : 1733171115872,
+      "stop" : 1733171116584,
+      "duration" : 712
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "bee_basket_page",
+    "time" : {
+      "start" : 1733171116584,
+      "stop" : 1733171116584,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "playwright._impl._errors.TimeoutError: Locator.click: Timeout 10000ms exceeded.\nCall log:\nwaiting for locator(\"//span[@class = \\\"n3jKk ffb9F cell-text\\\" and text() = \\\"план б.\\\"]\")\n  -   locator resolved to <span class=\"n3jKk ffb9F cell-text\">план б.</span>\n  - attempting click action\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   performing click action\n  -   click action done\n  -   waiting for scheduled navigations to finish",
+    "statusTrace" : "self = <tests.test_search.TestSearch object at 0x7f7db7df9310>\nbee_home_page = <pages.bee_home_page.BeeHomePage object at 0x7f7db79a2fd0>\nbee_planb_page = <pages.bee_planb_page.BeePlanBPage object at 0x7f7db7dd17f0>\nbee_basket_page = <pages.bee_basket_page.BeeBasketPage object at 0x7f7db7dd1e80>\n\n    @pytest.mark.smoke\n    def test_search_and_buy_tariff(\n        self,\n            bee_home_page: BeeHomePage,\n            bee_planb_page: BeePlanBPage,\n            bee_basket_page: BeeBasketPage\n    ):\n    \n        bee_home_page.visit(BASE_URL)\n        bee_home_page.navbar.open_search()\n>       bee_home_page.navbar.search_modal.find_result_by_clicking_frequent_keyword_tariff()\n\ntests/test_search.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ncomponents/modals/search_modal.py:42: in find_result_by_clicking_frequent_keyword_tariff\n    self.result_tariff_plan_b_button.click()\npage_factory/component.py:25: in click\n    locator.click(timeout=10000)\n/opt/hostedtoolcache/Python/3.13.0/x64/lib/python3.13/site-packages/playwright/sync_api/_generated.py:15398: in click\n    self._sync(\n/opt/hostedtoolcache/Python/3.13.0/x64/lib/python3.13/site-packages/playwright/_impl/_locator.py:156: in click\n    return await self._frame.click(self._selector, strict=True, **params)\n/opt/hostedtoolcache/Python/3.13.0/x64/lib/python3.13/site-packages/playwright/_impl/_frame.py:488: in click\n    await self._channel.send(\"click\", locals_to_params(locals()))\n/opt/hostedtoolcache/Python/3.13.0/x64/lib/python3.13/site-packages/playwright/_impl/_connection.py:59: in send\n    return await self._connection.wrap_api_call(\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <playwright._impl._connection.Connection object at 0x7f7db79a0910>\ncb = <function Channel.send.<locals>.<lambda> at 0x7f7db7806d40>\nis_internal = False\n\n    async def wrap_api_call(\n        self, cb: Callable[[], Any], is_internal: bool = False\n    ) -> Any:\n        if self._api_zone.get():\n            return await cb()\n        task = asyncio.current_task(self._loop)\n        st: List[inspect.FrameInfo] = getattr(task, \"__pw_stack__\", inspect.stack())\n        parsed_st = _extract_stack_trace_information_from_stack(st, is_internal)\n        self._api_zone.set(parsed_st)\n        try:\n            return await cb()\n        except Exception as error:\n>           raise rewrite_error(error, f\"{parsed_st['apiName']}: {error}\") from None\nE           playwright._impl._errors.TimeoutError: Locator.click: Timeout 10000ms exceeded.\nE           Call log:\nE           waiting for locator(\"//span[@class = \\\"n3jKk ffb9F cell-text\\\" and text() = \\\"план б.\\\"]\")\nE             -   locator resolved to <span class=\"n3jKk ffb9F cell-text\">план б.</span>\nE             - attempting click action\nE             -   waiting for element to be visible, enabled and stable\nE             -   element is visible, enabled and stable\nE             -   scrolling into view if needed\nE             -   done scrolling\nE             -   performing click action\nE             -   click action done\nE             -   waiting for scheduled navigations to finish\n\n/opt/hostedtoolcache/Python/3.13.0/x64/lib/python3.13/site-packages/playwright/_impl/_connection.py:520: TimeoutError",
+    "steps" : [ {
+      "name" : "Opening the url \"https://moskva.beeline.ru/customers/products/\"",
+      "time" : {
+        "start" : 1733171116585,
+        "stop" : 1733171123343,
+        "duration" : 6758
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Checking that button \"Search\" is visible",
+      "time" : {
+        "start" : 1733171123343,
+        "stop" : 1733171123432,
+        "duration" : 89
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Hovering over button with name \"Search\"",
+      "time" : {
+        "start" : 1733171123432,
+        "stop" : 1733171123549,
+        "duration" : 117
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Clicking button with name \"Search\"",
+      "time" : {
+        "start" : 1733171123549,
+        "stop" : 1733171123758,
+        "duration" : 209
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Checking that input \"Search products\" is visible",
+      "time" : {
+        "start" : 1733171123758,
+        "stop" : 1733171123777,
+        "duration" : 19
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Checking that title \"Search modal title\" is visible",
+      "time" : {
+        "start" : 1733171123777,
+        "stop" : 1733171123790,
+        "duration" : 13
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Checking that button \"Frequent Keyword Tariff\" is visible",
+      "time" : {
+        "start" : 1733171123790,
+        "stop" : 1733171124191,
+        "duration" : 401
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Clicking button with name \"Frequent Keyword Tariff\"",
+      "time" : {
+        "start" : 1733171124192,
+        "stop" : 1733171124462,
+        "duration" : 270
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Checking that input \"Search products\" has a value \"тарифы\"",
+      "time" : {
+        "start" : 1733171124462,
+        "stop" : 1733171124468,
+        "duration" : 6
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Checking that button \"Plan B result\" is visible",
+      "time" : {
+        "start" : 1733171124468,
+        "stop" : 1733171124943,
+        "duration" : 475
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Clicking button with name \"Plan B result\"",
+      "time" : {
+        "start" : 1733171124943,
+        "stop" : 1733171134977,
+        "duration" : 10034
+      },
+      "status" : "broken",
+      "statusMessage" : "playwright._impl._errors.TimeoutError: Locator.click: Timeout 10000ms exceeded.\nCall log:\nwaiting for locator(\"//span[@class = \\\"n3jKk ffb9F cell-text\\\" and text() = \\\"план б.\\\"]\")\n  -   locator resolved to <span class=\"n3jKk ffb9F cell-text\">план б.</span>\n  - attempting click action\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   performing click action\n  -   click action done\n  -   waiting for scheduled navigations to finish\n\n",
+      "statusTrace" : "  File \"/home/runner/work/petProjectBee/petProjectBee/page_factory/component.py\", line 25, in click\n    locator.click(timeout=10000)\n    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.13.0/x64/lib/python3.13/site-packages/playwright/sync_api/_generated.py\", line 15398, in click\n    self._sync(\n    ~~~~~~~~~~^\n        self._impl_obj.click(\n        ^^^^^^^^^^^^^^^^^^^^^\n    ...<9 lines>...\n        )\n        ^\n    )\n    ^\n  File \"/opt/hostedtoolcache/Python/3.13.0/x64/lib/python3.13/site-packages/playwright/_impl/_sync_base.py\", line 115, in _sync\n    return task.result()\n           ~~~~~~~~~~~^^\n  File \"/opt/hostedtoolcache/Python/3.13.0/x64/lib/python3.13/site-packages/playwright/_impl/_locator.py\", line 156, in click\n    return await self._frame.click(self._selector, strict=True, **params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.13.0/x64/lib/python3.13/site-packages/playwright/_impl/_frame.py\", line 488, in click\n    await self._channel.send(\"click\", locals_to_params(locals()))\n  File \"/opt/hostedtoolcache/Python/3.13.0/x64/lib/python3.13/site-packages/playwright/_impl/_connection.py\", line 59, in send\n    return await self._connection.wrap_api_call(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        lambda: self.inner_send(method, params, False)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/opt/hostedtoolcache/Python/3.13.0/x64/lib/python3.13/site-packages/playwright/_impl/_connection.py\", line 520, in wrap_api_call\n    raise rewrite_error(error, f\"{parsed_st['apiName']}: {error}\") from None\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 11,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "browser_page::0",
+    "time" : {
+      "start" : 1733171135389,
+      "stop" : 1733171141744,
+      "duration" : 6355
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "10c1a84d8075213",
+      "name" : "screenshot",
+      "source" : "10c1a84d8075213.png",
+      "type" : "image/png",
+      "size" : 7188
+    }, {
+      "uid" : "cec53635454abc5c",
+      "name" : "video",
+      "source" : "cec53635454abc5c.webm",
+      "type" : "video/webm",
+      "size" : 794606
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "smoke"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_search"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestSearch"
+  }, {
+    "name" : "host",
+    "value" : "fv-az2018-28"
+  }, {
+    "name" : "thread",
+    "value" : "4568-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_search"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "browser_page",
+    "value" : "'chromium'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 1,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "caca8dbdea34ee45",
+        "reportUrl" : "https://DVlad9393.github.io/petProjectBee/19//#testresult/caca8dbdea34ee45",
+        "status" : "passed",
+        "time" : {
+          "start" : 1733169919217,
+          "stop" : 1733169941028,
+          "duration" : 21811
+        }
+      } ]
+    },
+    "tags" : [ "smoke" ]
+  },
+  "source" : "26843f84994c6442.json",
+  "parameterValues" : [ "'chromium'" ]
+}

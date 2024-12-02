@@ -1,0 +1,10 @@
+[ {
+  "name" : "GitHub Actions",
+  "type" : "github",
+  "url" : "https://DVlad9393.github.io/petProjectBee",
+  "buildOrder" : 20,
+  "buildName" : "GitHub Actions Run #12127330604",
+  "buildUrl" : "https://github.com/DVlad9393/petProjectBee/actions/runs/12127330604",
+  "reportName" : "Allure Report with history",
+  "reportUrl" : "https://DVlad9393.github.io/petProjectBee/20/"
+} ]

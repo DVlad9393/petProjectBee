@@ -1,0 +1,21 @@
+[ {
+  "uid" : "d1472dd7348c7ae6",
+  "name" : "test_search_smartphone_page[chromium-\\u0441\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b]",
+  "time" : {
+    "start" : 1733171100789,
+    "stop" : 1733171115356,
+    "duration" : 14567
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "26843f84994c6442",
+  "name" : "test_search_and_buy_tariff[chromium]",
+  "time" : {
+    "start" : 1733171116585,
+    "stop" : 1733171134979,
+    "duration" : 18394
+  },
+  "status" : "broken",
+  "severity" : "normal"
+} ]
