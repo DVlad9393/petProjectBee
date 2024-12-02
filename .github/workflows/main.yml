@@ -1,4 +1,4 @@
-name: Test with VPN
+name: Test with VPN and allure
 
 on:
   workflow_dispatch:  # Можно запустить вручную
