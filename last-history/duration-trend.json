@@ -1,17 +1,3 @@
 [ {
-  "buildOrder" : 12,
-  "reportUrl" : "https://DVlad9393.github.io/petProjectBee/12/",
-  "reportName" : "Allure Report with history",
-  "data" : {
-    "duration" : 23844
-  }
-}, {
-  "buildOrder" : 11,
-  "reportUrl" : "https://DVlad9393.github.io/petProjectBee/11/",
-  "reportName" : "Allure Report with history",
-  "data" : {
-    "duration" : 1477
-  }
-}, {
   "data" : { }
 } ]
