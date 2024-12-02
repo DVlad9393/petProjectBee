@@ -1,52 +1,70 @@
-name: tests_with_allure
+name: Test with VPN
 
 on:
-  workflow_dispatch:
-
+  workflow_dispatch:  # Можно запустить вручную
   pull_request:
     branches:
       - main
 
 jobs:
-  build:
+  vpn_and_tests:
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v4
-    - name: Set up Python 3.13
-      uses: actions/setup-python@v5
-      with:
-        python-version: "3.13"
+      # Шаг 1: Установить и настроить VPN
+      - name: Install WireGuard
+        run: sudo apt-get update && sudo apt-get install -y wireguard
 
-    - name: install requirements
-      run: |
-       pip install -r requirements.txt
+      - name: Setup WireGuard Configuration
+        run: echo "${{ secrets.VPN_CONFIG }}" > wg0.conf  # Загружаем конфигурацию VPN
 
-    - name: Install Playwright Browsers
-      run: |
-        playwright install
+      - name: Connect to VPN
+        run: |
+          sudo wg-quick up wg0  # Подключаемся к VPN
+          sleep 5  # Ожидаем, пока VPN подключится
 
-    - name: Run tests with Xvfb
-      run: xvfb-run pytest
+      - name: Verify VPN Connection
+        run: curl -s https://ipinfo.io  # Проверяем внешний IP-адрес, чтобы убедиться, что VPN работает
 
-    - name: get allure history
-      uses: actions/checkout@v4
-      if: always()
-      with:
-        ref: gh-pages
-        path: gh-pages
+      # Шаг 2: Настройка и выполнение тестов
+      - name: Checkout repository
+        uses: actions/checkout@v4  # Клонируем репозиторий
 
-    - name: allure report
-      uses: simple-elf/allure-report-action@v1.6
-      if: always()
-      with:
-        allure_results: allure-results
-        allure_history: allure-history
-        keep_reports: 20
+      - name: Set up Python 3.13
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"  # Настроим версию Python
 
-    - name: publish allure
-      if: always()
-      uses: peaceiris/actions-gh-pages@v2
-      env:
-        PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: allure-history
+      - name: Install requirements
+        run: |
+          pip install -r requirements.txt  # Устанавливаем зависимости
+
+      - name: Install Playwright Browsers
+        run: |
+          playwright install  # Устанавливаем браузеры для Playwright
+
+      - name: Run tests with Xvfb
+        run: xvfb-run pytest  # Запуск тестов через Xvfb
+
+      - name: Get allure history
+        uses: actions/checkout@v4
+        if: always()
+        with:
+          ref: gh-pages
+          path: gh-pages  # Получаем историю отчетов
+
+      - name: Allure report
+        uses: simple-elf/allure-report-action@v1.6
+        if: always()
+        with:
+          allure_results: allure-results
+          allure_history: allure-history
+          keep_reports: 20
+
+      - name: Publish allure
+        if: always()
+        uses: peaceiris/actions-gh-pages@v2
+        env:
+          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: allure-history
