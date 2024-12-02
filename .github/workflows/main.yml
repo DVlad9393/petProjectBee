@@ -12,8 +12,10 @@ jobs:
 
     steps:
       # Шаг 1: Установить и настроить VPN
-      - name: Install WireGuard
-        run: sudo apt-get update && sudo apt-get install -y wireguard
+      - name: Install WireGuard and resolvconf
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wireguard resolvconf  # Устанавливаем и WireGuard, и resolvconf
 
       - name: Setup WireGuard Configuration
         run: echo "${{ secrets.VPN_CONFIG }}" | sudo tee /etc/wireguard/wg0.conf > /dev/null  # Загружаем конфигурацию в нужное место
