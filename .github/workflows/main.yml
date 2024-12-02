@@ -16,7 +16,7 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y wireguard
 
       - name: Setup WireGuard Configuration
-        run: echo "${{ secrets.VPN_CONFIG }}" > wg0.conf  # Загружаем конфигурацию VPN
+        run: echo "${{ secrets.VPN_CONFIG }}" | sudo tee /etc/wireguard/wg0.conf > /dev/null  # Загружаем конфигурацию в нужное место
 
       - name: Connect to VPN
         run: |
