@@ -1,3 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"broken","Sun Dec 01 15:26:15 GMT 2024","Sun Dec 01 15:26:15 GMT 2024","0","tests","test_search","TestSearch","","","test_search_and_buy_tariff[chromium]",""
-"broken","Sun Dec 01 15:26:14 GMT 2024","Sun Dec 01 15:26:14 GMT 2024","0","tests","test_search","TestSearch","","","test_search_smartphone_page[chromium-\u0441\u043c\u0430\u0440\u0442\u0444\u043e\u043d\u044b]",""
