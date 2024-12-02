@@ -1,7 +1,7 @@
 name: Test with VPN and allure
 
 on:
-  workflow_dispatch:  # Можно запустить вручную
+  workflow_dispatch:  # Can be started manually
   pull_request:
     branches:
       - main
@@ -11,49 +11,49 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Шаг 1: Установить и настроить VPN
+      # Step 1: Install and configure VPN
       - name: Install WireGuard and resolvconf
         run: |
           sudo apt-get update
-          sudo apt-get install -y wireguard resolvconf  # Устанавливаем и WireGuard, и resolvconf
+          sudo apt-get install -y wireguard resolvconf  # Install both WireGuard and resolvconf
 
       - name: Setup WireGuard Configuration
-        run: echo "${{ secrets.VPN_CONFIG }}" | sudo tee /etc/wireguard/wg0.conf > /dev/null  # Загружаем конфигурацию в нужное место
+        run: echo "${{ secrets.VPN_CONFIG }}" | sudo tee /etc/wireguard/wg0.conf > /dev/null  # Loading the configuration to the desired location
 
       - name: Connect to VPN
         run: |
-          sudo wg-quick up wg0  # Подключаемся к VPN
-          sleep 5  # Ожидаем, пока VPN подключится
+          sudo wg-quick up wg0  # Connect to VPN
+          sleep 5  # Waiting for the VPN to connect
 
       - name: Verify VPN Connection
-        run: curl -s https://ipinfo.io  # Проверяем внешний IP-адрес, чтобы убедиться, что VPN работает
+        run: curl -s https://ipinfo.io  # Checking the external IP address to make sure the VPN is working
 
-      # Шаг 2: Настройка и выполнение тестов
+      # Step 2: Setting up and running tests
       - name: Checkout repository
-        uses: actions/checkout@v4  # Клонируем репозиторий
+        uses: actions/checkout@v4  # Cloning the repository
 
       - name: Set up Python 3.13
         uses: actions/setup-python@v5
         with:
-          python-version: "3.13"  # Настроим версию Python
+          python-version: "3.13"  # set up the Python version
 
       - name: Install requirements
         run: |
-          pip install -r requirements.txt  # Устанавливаем зависимости
+          pip install -r requirements.txt  # Installing dependencies
 
       - name: Install Playwright Browsers
         run: |
-          playwright install  # Устанавливаем браузеры для Playwright
+          playwright install  # Installing browsers for Playwright
 
       - name: Run tests with Xvfb
-        run: xvfb-run pytest  # Запуск тестов через Xvfb
+        run: xvfb-run pytest  # Running tests via Xvfb
 
       - name: Get allure history
         uses: actions/checkout@v4
         if: always()
         with:
           ref: gh-pages
-          path: gh-pages  # Получаем историю отчетов
+          path: gh-pages  # Getting the report history
 
       - name: Allure report
         uses: simple-elf/allure-report-action@v1.6
