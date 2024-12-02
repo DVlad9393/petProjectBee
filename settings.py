@@ -1,1 +1,1 @@
-BASE_URL = 'https://krasnodar.beeline.ru/customers/products/'
+BASE_URL = 'https://https://www.google.com/'
