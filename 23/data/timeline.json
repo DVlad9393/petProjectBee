@@ -1,0 +1,39 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "fv-az956-652",
+    "children" : [ {
+      "name" : "4680-MainThread",
+      "children" : [ {
+        "name" : "test_search_smartphone_page[chromium-\\u0441\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b]",
+        "uid" : "97cad5ac7a1d7307",
+        "parentUid" : "0c3f699df5f884b39235f2640f150d9f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1733255168161,
+          "stop" : 1733255184071,
+          "duration" : 15910
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'chromium'", "'смартфоны'" ]
+      }, {
+        "name" : "test_search_and_buy_tariff[chromium]",
+        "uid" : "69e9d69ae4a76d43",
+        "parentUid" : "0c3f699df5f884b39235f2640f150d9f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1733255185436,
+          "stop" : 1733255205664,
+          "duration" : 20228
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'chromium'" ]
+      } ],
+      "uid" : "0c3f699df5f884b39235f2640f150d9f"
+    } ],
+    "uid" : "cf22c7ff8fdcc724a5501cb69bd460c1"
+  } ],
+  "name" : "timeline"
+}
