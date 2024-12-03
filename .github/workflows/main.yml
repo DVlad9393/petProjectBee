@@ -3,8 +3,7 @@ name: Test with VPN and allure
 on:
   workflow_dispatch:  # Can be started manually
   pull_request:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
   vpn_and_tests:
