@@ -1,0 +1,471 @@
+{
+  "uid" : "ec57ddf866e2ff27",
+  "name" : "test_search_and_buy_tariff[chromium]",
+  "fullName" : "tests.test_search.TestSearch#test_search_and_buy_tariff",
+  "historyId" : "eab6a5d5fb15ee169fc8f0aa92401b98",
+  "time" : {
+    "start" : 1734254005804,
+    "stop" : 1734254029207,
+    "duration" : 23403
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "browser_page",
+    "time" : {
+      "start" : 1734254005088,
+      "stop" : 1734254005803,
+      "duration" : 715
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "bee_home_page",
+    "time" : {
+      "start" : 1734254005803,
+      "stop" : 1734254005803,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "bee_basket_page",
+    "time" : {
+      "start" : 1734254005804,
+      "stop" : 1734254005804,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "bee_planb_page",
+    "time" : {
+      "start" : 1734254005803,
+      "stop" : 1734254005803,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Opening the url \"https://krasnodar.beeline.ru/customers/products/\"",
+      "time" : {
+        "start" : 1734254005804,
+        "stop" : 1734254015111,
+        "duration" : 9307
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Checking that button \"Search\" is visible",
+      "time" : {
+        "start" : 1734254015112,
+        "stop" : 1734254015175,
+        "duration" : 63
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Hovering over button with name \"Search\"",
+      "time" : {
+        "start" : 1734254015175,
+        "stop" : 1734254015306,
+        "duration" : 131
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Clicking button with name \"Search\"",
+      "time" : {
+        "start" : 1734254015306,
+        "stop" : 1734254015544,
+        "duration" : 238
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Checking that input \"Search products\" is visible",
+      "time" : {
+        "start" : 1734254015544,
+        "stop" : 1734254015562,
+        "duration" : 18
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Checking that title \"Search modal title\" is visible",
+      "time" : {
+        "start" : 1734254015562,
+        "stop" : 1734254015568,
+        "duration" : 6
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Checking that button \"Frequent Keyword Tariff\" is visible",
+      "time" : {
+        "start" : 1734254015569,
+        "stop" : 1734254016437,
+        "duration" : 868
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Clicking button with name \"Frequent Keyword Tariff\"",
+      "time" : {
+        "start" : 1734254016437,
+        "stop" : 1734254016748,
+        "duration" : 311
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Checking that input \"Search products\" has a value \"тарифы\"",
+      "time" : {
+        "start" : 1734254016748,
+        "stop" : 1734254016755,
+        "duration" : 7
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Checking that button \"Plan B result\" is visible",
+      "time" : {
+        "start" : 1734254016755,
+        "stop" : 1734254017171,
+        "duration" : 416
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Clicking button with name \"Plan B result\"",
+      "time" : {
+        "start" : 1734254017171,
+        "stop" : 1734254018686,
+        "duration" : 1515
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Checking that title \"Product Plan B\" is visible",
+      "time" : {
+        "start" : 1734254018686,
+        "stop" : 1734254021040,
+        "duration" : 2354
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Checking that title \"Product Plan B\" has text \"настрой план б. под себя\"",
+      "time" : {
+        "start" : 1734254021040,
+        "stop" : 1734254021046,
+        "duration" : 6
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Checking that button \"Product Plan B title\" is visible",
+      "time" : {
+        "start" : 1734254021046,
+        "stop" : 1734254021059,
+        "duration" : 13
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Clicking button with name \"Product Plan B title\"",
+      "time" : {
+        "start" : 1734254021059,
+        "stop" : 1734254023879,
+        "duration" : 2820
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Checking that title \"First added product to basket\" is visible",
+      "time" : {
+        "start" : 1734254023879,
+        "stop" : 1734254029198,
+        "duration" : 5319
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Checking that title \"First added product to basket\" has text \"план б.\"",
+      "time" : {
+        "start" : 1734254029198,
+        "stop" : 1734254029207,
+        "duration" : 9
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 17,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "browser_page::0",
+    "time" : {
+      "start" : 1734254029209,
+      "stop" : 1734254029767,
+      "duration" : 558
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "5d74abc421b1674",
+      "name" : "screenshot",
+      "source" : "5d74abc421b1674.png",
+      "type" : "image/png",
+      "size" : 60708
+    }, {
+      "uid" : "b4b64d6304af05aa",
+      "name" : "video",
+      "source" : "b4b64d6304af05aa.webm",
+      "type" : "video/webm",
+      "size" : 1063196
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "smoke"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_search"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestSearch"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1047-980"
+  }, {
+    "name" : "thread",
+    "value" : "4673-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_search"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "browser_page",
+    "value" : "'chromium'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 1,
+        "skipped" : 0,
+        "passed" : 5,
+        "unknown" : 0,
+        "total" : 6
+      },
+      "items" : [ {
+        "uid" : "69e9d69ae4a76d43",
+        "reportUrl" : "https://DVlad9393.github.io/petProjectBee/23//#testresult/69e9d69ae4a76d43",
+        "status" : "passed",
+        "time" : {
+          "start" : 1733255185436,
+          "stop" : 1733255205664,
+          "duration" : 20228
+        }
+      }, {
+        "uid" : "45b89d5b1848ecc3",
+        "reportUrl" : "https://DVlad9393.github.io/petProjectBee/22//#testresult/45b89d5b1848ecc3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1733172140056,
+          "stop" : 1733172162994,
+          "duration" : 22938
+        }
+      }, {
+        "uid" : "2c20667fb7a7c7b9",
+        "reportUrl" : "https://DVlad9393.github.io/petProjectBee/21//#testresult/2c20667fb7a7c7b9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1733171581028,
+          "stop" : 1733171600997,
+          "duration" : 19969
+        }
+      }, {
+        "uid" : "26843f84994c6442",
+        "reportUrl" : "https://DVlad9393.github.io/petProjectBee/20//#testresult/26843f84994c6442",
+        "status" : "broken",
+        "statusDetails" : "playwright._impl._errors.TimeoutError: Locator.click: Timeout 10000ms exceeded.\nCall log:\nwaiting for locator(\"//span[@class = \\\"n3jKk ffb9F cell-text\\\" and text() = \\\"план б.\\\"]\")\n  -   locator resolved to <span class=\"n3jKk ffb9F cell-text\">план б.</span>\n  - attempting click action\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   performing click action\n  -   click action done\n  -   waiting for scheduled navigations to finish",
+        "time" : {
+          "start" : 1733171116585,
+          "stop" : 1733171134979,
+          "duration" : 18394
+        }
+      }, {
+        "uid" : "caca8dbdea34ee45",
+        "reportUrl" : "https://DVlad9393.github.io/petProjectBee/19//#testresult/caca8dbdea34ee45",
+        "status" : "passed",
+        "time" : {
+          "start" : 1733169919217,
+          "stop" : 1733169941028,
+          "duration" : 21811
+        }
+      } ]
+    },
+    "tags" : [ "smoke" ]
+  },
+  "source" : "ec57ddf866e2ff27.json",
+  "parameterValues" : [ "'chromium'" ]
+}

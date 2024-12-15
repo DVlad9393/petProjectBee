@@ -1,0 +1,35 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "tests.test_search",
+    "children" : [ {
+      "name" : "test_search_smartphone_page[chromium-\\u0441\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b]",
+      "uid" : "3453db63a4eff636",
+      "parentUid" : "11ca2169a79c147a1551cca7fd9e4a1c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1734253985844,
+        "stop" : 1734254004164,
+        "duration" : 18320
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'chromium'", "'смартфоны'" ]
+    }, {
+      "name" : "test_search_and_buy_tariff[chromium]",
+      "uid" : "ec57ddf866e2ff27",
+      "parentUid" : "11ca2169a79c147a1551cca7fd9e4a1c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1734254005804,
+        "stop" : 1734254029207,
+        "duration" : 23403
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'chromium'" ]
+    } ],
+    "uid" : "tests.test_search"
+  } ],
+  "name" : "packages"
+}

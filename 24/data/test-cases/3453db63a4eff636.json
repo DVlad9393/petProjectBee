@@ -1,0 +1,365 @@
+{
+  "uid" : "3453db63a4eff636",
+  "name" : "test_search_smartphone_page[chromium-\\u0441\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b]",
+  "fullName" : "tests.test_search.TestSearch#test_search_smartphone_page",
+  "historyId" : "04ffc5e37185a9dc50d27b420b1769a6",
+  "time" : {
+    "start" : 1734253985844,
+    "stop" : 1734254004164,
+    "duration" : 18320
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "bee_home_page",
+    "time" : {
+      "start" : 1734253985843,
+      "stop" : 1734253985843,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "browser_page",
+    "time" : {
+      "start" : 1734253985003,
+      "stop" : 1734253985843,
+      "duration" : 840
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "bee_search_page",
+    "time" : {
+      "start" : 1734253985843,
+      "stop" : 1734253985843,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Opening the url \"https://krasnodar.beeline.ru/customers/products/\"",
+      "time" : {
+        "start" : 1734253985844,
+        "stop" : 1734253994844,
+        "duration" : 9000
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Checking that button \"Search\" is visible",
+      "time" : {
+        "start" : 1734253994844,
+        "stop" : 1734253994928,
+        "duration" : 84
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Hovering over button with name \"Search\"",
+      "time" : {
+        "start" : 1734253994929,
+        "stop" : 1734253995080,
+        "duration" : 151
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Clicking button with name \"Search\"",
+      "time" : {
+        "start" : 1734253995080,
+        "stop" : 1734253995247,
+        "duration" : 167
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Checking that input \"Search products\" is visible",
+      "time" : {
+        "start" : 1734253995247,
+        "stop" : 1734253995254,
+        "duration" : 7
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Checking that title \"Search modal title\" is visible",
+      "time" : {
+        "start" : 1734253995254,
+        "stop" : 1734253995260,
+        "duration" : 6
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Fill input \"Search products\" to value \"смартфоны\"",
+      "time" : {
+        "start" : 1734253995260,
+        "stop" : 1734253995303,
+        "duration" : 43
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Checking that input \"Search products\" has a value \"смартфоны\"",
+        "time" : {
+          "start" : 1734253995290,
+          "stop" : 1734253995303,
+          "duration" : 13
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Clicking button with name \"All Results\"",
+      "time" : {
+        "start" : 1734253995303,
+        "stop" : 1734253997667,
+        "duration" : 2364
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Checking that title \"Product title\" is visible",
+      "time" : {
+        "start" : 1734253997667,
+        "stop" : 1734254004063,
+        "duration" : 6396
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Checking that title \"Product title\" has text \"смартфоны\"",
+      "time" : {
+        "start" : 1734254004063,
+        "stop" : 1734254004164,
+        "duration" : 101
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 11,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "browser_page::0",
+    "time" : {
+      "start" : 1734254004165,
+      "stop" : 1734254005086,
+      "duration" : 921
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "5134a830f2bc7b96",
+      "name" : "screenshot",
+      "source" : "5134a830f2bc7b96.png",
+      "type" : "image/png",
+      "size" : 191231
+    }, {
+      "uid" : "f74f1aac20fce477",
+      "name" : "video",
+      "source" : "f74f1aac20fce477.webm",
+      "type" : "video/webm",
+      "size" : 726497
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_search"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestSearch"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1047-980"
+  }, {
+    "name" : "thread",
+    "value" : "4673-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_search"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "browser_page",
+    "value" : "'chromium'"
+  }, {
+    "name" : "keyword",
+    "value" : "'смартфоны'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 6,
+        "unknown" : 0,
+        "total" : 6
+      },
+      "items" : [ {
+        "uid" : "97cad5ac7a1d7307",
+        "reportUrl" : "https://DVlad9393.github.io/petProjectBee/23//#testresult/97cad5ac7a1d7307",
+        "status" : "passed",
+        "time" : {
+          "start" : 1733255168161,
+          "stop" : 1733255184071,
+          "duration" : 15910
+        }
+      }, {
+        "uid" : "5bf0f1211840f7fe",
+        "reportUrl" : "https://DVlad9393.github.io/petProjectBee/22//#testresult/5bf0f1211840f7fe",
+        "status" : "passed",
+        "time" : {
+          "start" : 1733172121281,
+          "stop" : 1733172138779,
+          "duration" : 17498
+        }
+      }, {
+        "uid" : "c8a9979307047c38",
+        "reportUrl" : "https://DVlad9393.github.io/petProjectBee/21//#testresult/c8a9979307047c38",
+        "status" : "passed",
+        "time" : {
+          "start" : 1733171564516,
+          "stop" : 1733171578914,
+          "duration" : 14398
+        }
+      }, {
+        "uid" : "d1472dd7348c7ae6",
+        "reportUrl" : "https://DVlad9393.github.io/petProjectBee/20//#testresult/d1472dd7348c7ae6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1733171100789,
+          "stop" : 1733171115356,
+          "duration" : 14567
+        }
+      }, {
+        "uid" : "3424326fe8b727c1",
+        "reportUrl" : "https://DVlad9393.github.io/petProjectBee/19//#testresult/3424326fe8b727c1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1733169901146,
+          "stop" : 1733169917956,
+          "duration" : 16810
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "3453db63a4eff636.json",
+  "parameterValues" : [ "'chromium'", "'смартфоны'" ]
+}
